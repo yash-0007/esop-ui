@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>Place Order</title>
+  </head>
+
+  <body>
+    <h2>Place Order</h2>
+    <br />
+    <form class="form-fields">
+      <div class="row">
+        <div class="col">
+          <label for="quantity">Quantity</label>
+        </div>
+        <div class="col">
+          <input
+            type="number"
+            class="form-control"
+            id="quantity"
+            placeholder="Enter Quantity"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="order-type">Order Type</label>
+        </div>
+        <div class="col">
+          <select class="form-control" id="order-type">
+            <option selected disabled hidden>Select Order Type</option>
+            <option value="BUY">BUY</option>
+            <option value="SELL">SELL</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="esop-type">ESOP Type</label>
+        </div>
+
+        <div class="col">
+          <select class="form-control" id="esop-type">
+            <option selected disabled hidden>Select ESOP Type</option>
+            <option value="PERFORMANCE">PERFORMANCE</option>
+            <option value="NON_PERFORMANCE">NON-PERFORMANCE</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="price">Price</label>
+        </div>
+
+        <div class="col">
+          <input
+            type="number"
+            class="form-control"
+            id="price"
+            placeholder="Enter Price"
+          />
+        </div>
+      </div>
+      <div class="submit-button">
+        <button type="button" class="btn" onclick="placeOrder()">Submit</button>
+      </div>
+    </form>
+    <div id="response"></div>
+    <footer class="alert-message" style="visibility: hidden">
+      <div class="alert">
+        <span class="closebtn">&times;</span>
+        <strong class="alert-error-type">Error</strong><p>User not found.</p>
+      </div>
+      <div class="alert success" style="visibility: hidden">
+        <span class="closebtn">&times;</span>
+        <strong>Success!</strong> Indicates a successful or positive action.
+      </div>
+    </footer>
+
+    <script src="../js/PlaceOrder.js"></script>
+  </body>
+</html>

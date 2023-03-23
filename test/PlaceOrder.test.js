@@ -65,7 +65,7 @@ describe("Place Order", () => {
 
     const response = await getOrderStatus(mockResponse);
 
-    expect(response).toContain("Order Placed Successfully");
+    expect(response).toBe("Order Placed Successfully");
 
     global.fetch.mockRestore();
   });

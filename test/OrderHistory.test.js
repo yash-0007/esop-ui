@@ -35,7 +35,7 @@ describe("Order History", () => {
 
     const response = await getError(mockResponse);
 
-    expect(response).toContain("user doesn't exist");
+    expect(response).toBe("user doesn't exist");
 
     global.fetch.mockRestore();
   });
@@ -51,7 +51,7 @@ describe("Order History", () => {
 
     const response = await checkForNoTransactions(mockResponse);
 
-    expect(response).toContain("No Transactions found");
+    expect(response).toBe("No Transactions found");
 
     global.fetch.mockRestore();
   });
